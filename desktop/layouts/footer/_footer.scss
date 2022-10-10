@@ -1,0 +1,10 @@
+.footer {
+  @extend %section;
+  padding: 60px 0;
+
+  background-color: $heroBackgroundColor;
+
+  &-container {
+    @extend %container;
+  }
+}

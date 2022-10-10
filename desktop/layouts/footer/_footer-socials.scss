@@ -1,0 +1,19 @@
+.footer-title {
+  margin: 0 0 20px;
+  font-size: 14px;
+  font-weight: 700;
+  color: $primaryWhiteColor;
+  align-items: flex-end;
+  text-transform: uppercase;
+}
+
+.social-icons__link--grey {
+  fill: $primaryWhiteColor;
+  background-color: $footerIconsBG;
+}
+
+.social-icons__link:hover,
+.social-icons__link:focus {
+  background-color: $accentColor;
+}
+

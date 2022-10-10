@@ -1,0 +1,47 @@
+.specialization {
+    @extend %section;
+  padding: 47px 0 94px;
+
+  &-container {
+    @extend %container;
+}
+
+//   &-title {
+//     @extend %section-title; 
+// }
+}
+
+.specialization-list {
+    @extend %list;
+     display: flex;;
+     gap: 30px;
+
+     &__item {
+  width: calc((100% - 60px) / 3);
+  position: relative;
+  background-color: red;
+}
+}
+
+.specialization-list__overlay {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  display: flex;
+  margin: 0;
+  width: 100%;
+  height: 70px;
+  background-color: rgb(47, 48, 58, 0.8);
+  color: $primaryWhiteColor;
+
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  align-items: center;
+  justify-content: center;
+}
+
+
+

@@ -1,0 +1,12 @@
+.header {
+  @extend %section;
+  border-bottom: 1px solid #ececec;
+
+  &-container {
+    @extend %container;
+    @include CentredFlex(flex);
+    align-items: center;
+  }
+}
+
+

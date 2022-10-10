@@ -1,0 +1,22 @@
+.team {
+  @extend %section;
+  background-color: $secondaryBackgroundColor;
+  padding: 94px 0 94px;
+
+  &-container {
+    @extend %container;
+  }
+}
+
+// .team-title {
+//   @extend %section-title;
+// }
+
+.team-list {
+  @extend %list;
+  display: flex;
+  gap: 30px;
+}
+
+
+

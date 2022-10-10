@@ -1,0 +1,20 @@
+.header {
+  @extend %section;
+  position: relative;
+  border-bottom: 1px solid #ececec;
+
+  &-container {
+    @extend %container;
+    @include CentredFlex(flex);
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+
+
