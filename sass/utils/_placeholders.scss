@@ -1,38 +1,38 @@
 %list {
-    padding: 0;
-    margin: 0;
-    list-style: none;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 %link {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 %section {
-    margin-left: auto;
-    margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 %container {
-    margin: 0 auto;
-    padding-left: 15px;
-    padding-right: 15px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
 
-     @media screen and (min-width: 480px) {
-      width: 480px;
-    }
-
-    @media screen and (min-width: 768px) {
-      width: 768px;
-    }
-
-    @media screen and (min-width: 1200px) {
-      width: 1200px;
-    }
+  @media screen and (min-width: 480px) {
+    width: 480px;
   }
 
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
+}
+
 %button {
-      cursor: pointer;
+  cursor: pointer;
 }
 
 %visually-hidden {
@@ -51,8 +51,3 @@
 %title {
   color: $titleColor;
 }
-
- 
-
-  
-
