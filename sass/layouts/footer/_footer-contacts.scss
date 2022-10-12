@@ -1,8 +1,13 @@
 
 
-// .footer-list__item:not(:last-child) {
-//   margin-right: 93px;
-// }
+.footer-list__item:not(:last-child) {
+  @media screen and (min-width:1200px) {
+    .footer-list__item:not(:last-child) {
+      margin-right: 93px;
+    }
+  }
+  margin-right: 93px;
+}
 
 .logo__footer {
 
