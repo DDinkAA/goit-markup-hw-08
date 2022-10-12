@@ -1,19 +1,16 @@
 .header {
   @extend %section;
-  position: relative;
-  border-bottom: 1px solid #ececec;
+
+  border-bottom: 1px solid red;
+
+  @media screen and (max-width: 767px) {
+    height: 60px;
+  }
 
   &-container {
     @extend %container;
     @include CentredFlex(flex);
-    align-items: center;
     justify-content: space-between;
-    height: 60px;
-
-  
+    align-items: center;
   }
 }
-
-
-
-

@@ -2,6 +2,10 @@
   background-color: $secondaryBackgroundColor;
   padding: 60px 0 60px;
 
+  @media screen and (min-width: 1200px) {
+    padding: 94px 0 94px;
+  }
+
   &-container {
     @extend %container;
   }
@@ -11,7 +15,15 @@
   @extend %list;
   // display: flex;
   // gap: 30px;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
 }
+
+
 
 
 

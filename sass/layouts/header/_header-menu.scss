@@ -1,113 +1,136 @@
-
-
-
 // header-nav
-@media (max-width: 480px) {
-  .navigation {
+
+
+.header-nav {
+  @media screen and (max-width: 767px) {
     display: none;
+  }
+
+  @extend %list;
+  @include CentredFlex(flex);
+  
+
+  @media screen and (max-width: 1199px) {
+    margin-left: 88px;
+    
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+
+
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    color: $titleColor;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+
+    transition: color 250ms $timingFunction;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: $accentColor;
   }
 }
 
-// .header-nav {
-//   @extend %list;
-//   @include CentredFlex(flex);
-//   margin-left: 93px;
+.header-nav__item:not(:last-child) {
+  margin-right: 50px;
+}
 
+.header-nav__current {
+  position: relative;
+  display: block;
+  color: $accentColor;
+}
 
+.header-nav__current:after {
+  position: absolute;
+  bottom: -2px;
+  display: block;
+  content: " ";
+  width: calc(100% + 6px);
+  left: -3px;
+  height: 4px;
+  background-color: $accentColor;
+  border-radius: 2px;
+}
 
+//   header-contacts
 
-//   &__link {
-//     display: flex;
-//     align-items: center;
-//     padding-top: 32px;
-//     padding-bottom: 32px;
+.header-contacts {
+  @extend %list;
+  display: flex;
 
-//     color: $titleColor;
-//     font-size: 14px;
-//     font-weight: 500;
-//     line-height: 1.2;
-//     letter-spacing: 0.02em;
+  @media screen and (max-width: 1199px) {
+    display: block;
+    padding-top: 20px;
+  padding-bottom: 20px;
+  }
 
-//     transition: color 250ms $timingFunction;
-
+  @media screen and (max-width: 767px) {
+    display: none;
     
-//   }
+  }
 
-//   &__link:hover,
-//   &__link:focus {
-//     color: $accentColor;
-//   }
-// }
+  margin-left: 90px;
 
-// .header-nav__item:not(:last-child) {
-//   margin-right: 40px;
-// }
+  &__link {
+    display: flex;
+    align-items: center;
 
-// .header-nav__current {
-//   position: relative;
-//   display: block;
-//   color: $accentColor;
-// }
+    color: $primaryTextColor;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
 
-// .header-nav__current:after {
-//   position: absolute;
-//   bottom: -1px;
-//   display: block;
-//   content: "";
-//   width: calc(100% + 6px);
-//   left: -3px;
-//   height: 4px;
-//   background-color: $accentColor;
-//   border-radius: 2px;
-// }
+    @media screen and (min-width: 1200px) {
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
 
-// //   header-contacts
+    transition: color 250ms $timingFunction;
+  }
 
-// .header-contacts {
-//   @extend %list;
+  &__icon {
+    margin-right: 10px;
+    display: block;
+    fill: $primaryTextColor;
+
+    transition: fill 250ms $timingFunction;
+  }
+}
+
+.header-contacts__item:first-child {
+  @media screen and (max-width:1199px) {
+    margin-bottom: 10px;
+  }
+}
+
+// .header-contacts__item {
 //   display: flex;
-//   margin-left: auto;
-
-
-
-
-//   &__link {
-//     display: flex;
-//     align-items: center;
-//     padding-top: 32px;
-//     padding-bottom: 32px;
-
-//     color: $primaryTextColor;
-//     font-size: 14px;
-//     font-weight: 500;
-//     line-height: 1.2;
-//     letter-spacing: 0.02em;
-
-//     transition: color 250ms $timingFunction;
-//   }
-
-//   &__icon {
-//     margin-right: 10px;
-//     display: block;
-//     fill: $primaryTextColor;
-
-//     transition: fill 250ms $timingFunction;
-//   }
-
-
+//   margin-bottom: 20px;
 // }
 
-// .header-contacts__link:hover,
-// .header-contacts__link:focus {
-//   color: $accentColor;
-// }
 
-// .header-contacts__link:hover .header-contacts__icon,
-// .header-contacts__link:focus .header-contacts__icon {
-//   fill: $accentColor;
-// }
 
-// .header-contacts__item:not(:last-child) {
-//   margin-right: 50px;
-// }
 
+
+.header-contacts__link:hover,
+.header-contacts__link:focus {
+  color: $accentColor;
+}
+
+.header-contacts__link:hover .header-contacts__icon,
+.header-contacts__link:focus .header-contacts__icon {
+  fill: $accentColor;
+}
+
+.header-contacts__item:not(:last-child) {
+  margin-right: 50px;
+}
