@@ -1,7 +1,7 @@
 .footer {
   padding: 60px 0;
   @media screen and (min-width: 1200px){
-    padding: 95px 0;
+    padding: 94px 0;
   }
 
   background-color: $heroBackgroundColor;
@@ -14,12 +14,6 @@
 .footer-list {
   @extend %list;
   text-align: center;
-  
-  &__item:not(:last-child) {
-    @media screen and (max-width: 767px) {
-    margin-bottom: 60px;
-    }
-  }
 
   @media screen and (min-width: 768px) {
     display: inline-flex;
@@ -33,19 +27,21 @@
     text-align: left;
     align-items: baseline;
   }
-}
 
-.footer-list__item:last-child {
-  @media screen and (min-width: 768px) {
-    margin-left: auto;
-    margin-right: auto;
+  &__item:last-child {
+    @media screen and (min-width: 768px) {
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
-}
-
-.footer-list__item:first-child {
-  @media screen and (min-width: 768px) {
+  
+  &__item:not(:last-child) {
+    @media screen and (max-width: 1199px) {
     margin-bottom: 60px;
+    }
+    @media screen and (min-width:1200px) {
+      margin-right: 93px;
+    }
   }
 }
-
 

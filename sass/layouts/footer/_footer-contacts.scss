@@ -1,13 +1,6 @@
 
 
-.footer-list__item:not(:last-child) {
-  @media screen and (min-width:1200px) {
-    .footer-list__item:not(:last-child) {
-      margin-right: 93px;
-    }
-  }
-  margin-right: 93px;
-}
+
 
 .logo__footer {
 
@@ -24,7 +17,6 @@
     display: block;
     color: $primaryWhiteColor;
     font-style: normal;
-
     transition: $timingFunction;
   }
 
@@ -34,12 +26,20 @@
     color: $primaryWhiteColor;
     font-style: normal;
     color: rgba(255, 255, 255, 0.6);
+    @media screen and (min-width: 1200)  {
+      margin-bottom: 9px;
+    }
 
     transition: color 250ms $timingFunction;
   }
 
+ 
+
   &__item:not(:last-child){
     margin-bottom: 8px;
+    @media screen and (min-width:1200px) {
+      margin-bottom: 9px;
+    }
   }
 }
 
