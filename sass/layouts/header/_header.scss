@@ -1,7 +1,7 @@
 .header {
   @extend %section;
 
-  border-bottom: 1px solid red;
+  border-bottom: 1px solid #ececec;
 
   @media screen and (max-width: 767px) {
     height: 60px;
@@ -10,7 +10,11 @@
   &-container {
     @extend %container;
     @include CentredFlex(flex);
+    // @media screen and (max-width: 767px) {
+    //   justify-content: space-between;
+    // }
     justify-content: space-between;
+
     align-items: center;
   }
 }

@@ -1,24 +1,24 @@
 // header-nav
 
-
 .header-nav {
+  @extend %list;
+  @include CentredFlex(flex);
+
   @media screen and (max-width: 767px) {
     display: none;
   }
 
-  @extend %list;
-  @include CentredFlex(flex);
-  
-
-  @media screen and (max-width: 1199px) {
+  @media screen and (min-width: 768px) {
     margin-left: 88px;
-    
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 92px;
   }
 
   &__link {
     display: flex;
     align-items: center;
-
 
     padding-top: 32px;
     padding-bottom: 32px;
@@ -64,34 +64,30 @@
 
 .header-contacts {
   @extend %list;
-  display: flex;
+  display: none;
 
-  @media screen and (max-width: 1199px) {
+  @media screen and (min-width: 768px) {
     display: block;
-    padding-top: 20px;
-  padding-bottom: 20px;
+    margin-left: 88px;
   }
 
-  @media screen and (max-width: 767px) {
-    display: none;
-    
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    margin-left: 315px;
   }
-
-  margin-left: 90px;
 
   &__link {
     display: flex;
     align-items: center;
+    @include font(12px, 500, 1.2);
 
     color: $primaryTextColor;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1.2;
     letter-spacing: 0.02em;
 
     @media screen and (min-width: 1200px) {
       padding-top: 32px;
       padding-bottom: 32px;
+      @include font(12px, 500, 1.2);
     }
 
     transition: color 250ms $timingFunction;
@@ -107,19 +103,10 @@
 }
 
 .header-contacts__item:first-child {
-  @media screen and (max-width:1199px) {
+  @media screen and (max-width: 1199px) {
     margin-bottom: 10px;
   }
 }
-
-// .header-contacts__item {
-//   display: flex;
-//   margin-bottom: 20px;
-// }
-
-
-
-
 
 .header-contacts__link:hover,
 .header-contacts__link:focus {
@@ -132,5 +119,8 @@
 }
 
 .header-contacts__item:not(:last-child) {
-  margin-right: 50px;
+  @media screen and (min-width: 1200px)   {
+    margin-right: 50px;
+  }
+  
 }
