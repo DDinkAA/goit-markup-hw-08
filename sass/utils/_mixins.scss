@@ -10,20 +10,28 @@
   line-height: $lh;
 }
 
-@mixin mobile  {
+@mixin mobile {
   @media screen and (min-width: 480px) {
     @content;
   }
 }
 
-@mixin tablet  {
+@mixin tablet {
   @media screen and (min-width: 768px) {
     @content;
   }
 }
 
-@mixin descktop {
-  @media screen and (min-width: 768px) {
+@mixin desktop {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin retina {
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
     @content;
   }
 }

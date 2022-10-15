@@ -1,6 +1,6 @@
 .footer {
   padding: 60px 0;
-  @media screen and (min-width: 1200px){
+  @include desktop {
     padding: 94px 0;
   }
 
@@ -15,33 +15,38 @@
   @extend %list;
   text-align: center;
 
-  @media screen and (min-width: 768px) {
+  @include tablet {
     display: inline-flex;
     flex-wrap: wrap;
     text-align: center;
-    
+
     justify-content: space-between;
   }
 
-  @media screen and (min-width: 1200px){
+  @include desktop {
     text-align: left;
     align-items: baseline;
   }
 
   &__item:last-child {
-    @media screen and (min-width: 768px) {
+    @include tablet {
       margin-left: auto;
       margin-right: auto;
     }
   }
-  
+
   &__item:not(:last-child) {
-    @media screen and (max-width: 1199px) {
-    margin-bottom: 60px;
+    @media screen and (max-width: 767px) {
+      width: 100%;
     }
-    @media screen and (min-width:1200px) {
+    @media screen and (max-width: 1199x) {
+      width: 50%;
+      margin-bottom: 60px;
+    }
+    @include desktop {
       margin-right: 93px;
     }
   }
 }
+
 

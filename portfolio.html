@@ -18,21 +18,30 @@
 
   <body>
      <!-- Header -->
-    <header class="header">
+     <header class="header">
       <div class="header-container">
         <a href="./index.html" class="logo" target="_self"
           >Web<span class="logo__header">Studio</span>
         </a>
+
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg width="40" height="40" aria-label="Перемикач мобільного меню">
+            <use href="./images/svg-icon/symbol-defs.svg#burger"></use>
+          </svg>
+        </button>
+
         <ul class="header-nav">
           <li class="header-nav__item">
-            <a
-              href="./index.html"
-              class="header-nav__link "
+            <a href="./index.html" class="header-nav__link"
               >Студія</a
             >
           </li>
           <li class="header-nav__item">
-            <a href="./portfolio.html" class="header-nav__link header-nav__current">Портфоліо</a>
+            <a href="./portfolio.html" class="header-nav__link  header-nav__current">Портфоліо</a>
           </li>
           <li class="header-nav__item">
             <a href="#" class="header-nav__link">Контакти</a>
@@ -42,21 +51,26 @@
         <ul class="header-contacts">
           <li class="header-contacts__item">
             <a class="header-contacts__link" href="mailto:info@devstudio.com">
-              <svg class="header-contacts__icon" width="16px" height="12px">
+              <svg class="header-contacts__icon header-contacts__icon--envelop">
                 <use href="./images/svg-icon/symbol-defs.svg#envelope"></use>
               </svg>
               info@devstudio.com
             </a>
           </li>
+
           <li class="header-contacts__item">
             <a class="header-contacts__link" href="tel:+380961111111">
-              <svg class="header-contacts__icon" width="10px" height="16px">
+              <svg class="header-contacts__icon header-contacts__icon--smartphone">
                 <use href="./images/svg-icon/symbol-defs.svg#smartphone"></use>
               </svg>
               +38 096 111 11 11</a
             >
           </li>
         </ul>
+
+        <!-- <div class="navigation">
+          
+        </div> -->
       </div>
     </header>
 
@@ -97,11 +111,45 @@
             <li class="gallery-card">
               <a class="gallery-card__link" href="#" target="_self">
                 <div class="gallery-card__thumb">
-                  <img
-                    src="./images/portfolio/img-1.jpeg"
-                    alt="Веб-сайт Технокряк"
-                    width="370"
-                  >
+                  <picture>
+                    <source
+                      srcset="
+                      ./images/portfolio/desk/img-0-desk-1x.jpg 1x,
+                      ./images/portfolio/desk/img-0-desk-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="
+                      ./images/portfolio/tab/img-0-tab-1x.jpg 1x,
+                      ./images/portfolio/tab/img-0-tab-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                      ./images/portfolio/mob/img-0-mob-1x.jpg 1x,
+                      ./images/portfolio/mob/img-0-mob-2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+
+                    <source
+                      srcset="
+                      ./images/portfolio/320/img-0-320-1x.jpg 1x,
+                      ./images/portfolio/320/img-0-320-2x.jpg 2x
+                      "
+                      media="(max-width: 479px)"
+                    />
+
+                    <img src="./images/portfolio/desk/img-0-desk-1x.jpg" alt="Технокряк">
+                    
+                  </picture>
+                    
+    
+      
                   <p class="gallery-card__hover">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -119,11 +167,42 @@
             <li class="gallery-card">
               <a class="gallery-card__link link" href="#" target="_self">
                 <div class="gallery-card__thumb">
-                  <img
-                    src="./images/portfolio/img-2.jpeg"
-                    alt="Постер New Orlean vs Golden Star"
-                    width="370"
-                  >
+                  <picture>
+                    <source
+                      srcset="
+                      ./images/portfolio/desk/img-1-desk-1x.jpg 1x,
+                      ./images/portfolio/desk/img-1-desk-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="
+                      ./images/portfolio/tab/img-1-tab-1x.jpg 1x,
+                      ./images/portfolio/tab/img-1-tab-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                      ./images/portfolio/mob/img-1-mob-1x.jpg 1x,
+                      ./images/portfolio/mob/img-1-mob-2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+
+                    <source
+                      srcset="
+                      ./images/portfolio/320/img-1-320-1x.jpg 1x,
+                      ./images/portfolio/320/img-1-320-2x.jpg 2x
+                      "
+                      media="(max-width: 479px)"
+                    />
+
+                    <img src="./images/portfolio/desk/img-1-desk-1x.jpg" alt="Технокряк">
+                    
+                  </picture>
                   <p class="gallery-card__hover">
                     Всупереч порадам військових ніколи не закривайте очі і не
                     падайте ногами в бік ядерного вибуху, бо в будь-якому
@@ -143,11 +222,42 @@
             <li class="gallery-card">
               <a class="gallery-card__link link" href="#" target="_self">
                 <div class="gallery-card__thumb">
-                  <img
-                    src="./images/portfolio/img-3.jpeg"
-                    alt="Лого ресторану Seafood"
-                    width="370"
-                  >
+                  <picture>
+                    <source
+                      srcset="
+                      ./images/portfolio/desk/img-2-desk-1x.jpg 1x,
+                      ./images/portfolio/desk/img-2-desk-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="
+                      ./images/portfolio/tab/img-2-tab-1x.jpg 1x,
+                      ./images/portfolio/tab/img-2-tab-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                      ./images/portfolio/mob/img-2-mob-1x.jpg 1x,
+                      ./images/portfolio/mob/img-2-mob-2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+
+                    <source
+                      srcset="
+                      ./images/portfolio/320/img-2-320-1x.jpg 1x,
+                      ./images/portfolio/320/img-2-320-2x.jpg 2x
+                      "
+                      media="(max-width: 479px)"
+                    />
+
+                    <img src="./images/portfolio/desk/img-2-desk-1x.jpg" alt="Технокряк">
+                    
+                  </picture>
                   <p class="gallery-card__hover">
                     Всупереч порадам військових ніколи не закривайте очі і не
                     падайте ногами в бік ядерного вибуху, бо в будь-якому
@@ -167,11 +277,42 @@
             <li class="gallery-card">
               <a class="gallery-card__link link" href="#" target="_self">
                 <div class="gallery-card__thumb">
-                  <img
-                    src="./images/portfolio/img-4.jpeg"
-                    alt="Навушники"
-                    width="370"
-                  >
+                  <picture>
+                    <source
+                      srcset="
+                      ./images/portfolio/desk/img-3-desk-1x.jpg 1x,
+                      ./images/portfolio/desk/img-3-desk-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="
+                      ./images/portfolio/tab/img-3-tab-1x.jpg 1x,
+                      ./images/portfolio/tab/img-3-tab-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                      ./images/portfolio/mob/img-3-mob-1x.jpg 1x,
+                      ./images/portfolio/mob/img-3-mob-2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+
+                    <source
+                      srcset="
+                      ./images/portfolio/320/img-3-320-1x.jpg 1x,
+                      ./images/portfolio/320/img-3-320-2x.jpg 2x
+                      "
+                      media="(max-width: 479px)"
+                    />
+
+                    <img src="./images/portfolio/desk/img-3-desk-1x.jpg" alt="Технокряк">
+                    
+                  </picture>
                   <p class="gallery-card__hover">
                     Дуже важливо піклуватися про себе, щоб досягти успіху, але в
                     той же час це вимагає багато праці та болю. Якщо говорити
@@ -189,11 +330,42 @@
             <li class="gallery-card">
               <a class="gallery-card__link link" href="#" target="_self">
                 <div class="gallery-card__thumb">
-                  <img
-                    src="./images/portfolio/img-5.jpeg"
-                    alt="Дві коробки"
-                    width="370"
-                  >
+                  <picture>
+                    <source
+                      srcset="
+                      ./images/portfolio/desk/img-4-desk-1x.jpg 1x,
+                      ./images/portfolio/desk/img-4-desk-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="
+                      ./images/portfolio/tab/img-4-tab-1x.jpg 1x,
+                      ./images/portfolio/tab/img-4-tab-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                      ./images/portfolio/mob/img-4-mob-1x.jpg 1x,
+                      ./images/portfolio/mob/img-4-mob-2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+
+                    <source
+                      srcset="
+                      ./images/portfolio/320/img-4-320-1x.jpg 1x,
+                      ./images/portfolio/320/img-4-320-2x.jpg 2x
+                      "
+                      media="(max-width: 479px)"
+                    />
+
+                    <img src="./images/portfolio/desk/img-4-desk-1x.jpg" alt="Технокряк">
+                    
+                  </picture>
                   <p class="gallery-card__hover">
                     Дуже важливо піклуватися про себе, щоб досягти успіху, але в
                     той же час це вимагає багато праці та болю. Якщо говорити
@@ -211,11 +383,42 @@
             <li class="card-item">
               <a class="gallery-card__link link" href="#" target="_self">
                 <div class="gallery-card__thumb">
-                  <img
-                    src="./images/portfolio/img-6.jpeg"
-                    alt="Монітор"
-                    width="370"
-                  >
+                  <picture>
+                    <source
+                      srcset="
+                      ./images/portfolio/desk/img-5-desk-1x.jpg 1x,
+                      ./images/portfolio/desk/img-5-desk-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="
+                      ./images/portfolio/tab/img-5-tab-1x.jpg 1x,
+                      ./images/portfolio/tab/img-5-tab-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                      ./images/portfolio/mob/img-5-mob-1x.jpg 1x,
+                      ./images/portfolio/mob/img-5-mob-2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+
+                    <source
+                      srcset="
+                      ./images/portfolio/320/img-5-320-1x.jpg 1x,
+                      ./images/portfolio/320/img-5-320-2x.jpg 2x
+                      "
+                      media="(max-width: 479px)"
+                    />
+
+                    <img src="./images/portfolio/desk/img-5-desk-1x.jpg" alt="Технокряк">
+                    
+                  </picture>
                   <p class="gallery-card__hover">
                     Дуже важливо піклуватися про себе, щоб досягти успіху, але в
                     той же час це вимагає багато праці та болю. Якщо говорити
@@ -233,11 +436,42 @@
             <li class="gallery-card">
               <a class="gallery-card__link link" href="#" target="_self">
                 <div class="gallery-card__thumb">
-                  <img
-                    src="./images/portfolio/img-7.jpeg"
-                    alt="Журнал Limited Edition"
-                    width="370"
-                  >
+                  <picture>
+                    <source
+                      srcset="
+                      ./images/portfolio/desk/img-6-desk-1x.jpg 1x,
+                      ./images/portfolio/desk/img-6-desk-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="
+                      ./images/portfolio/tab/img-6-tab-1x.jpg 1x,
+                      ./images/portfolio/tab/img-6-tab-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                      ./images/portfolio/mob/img-6-mob-1x.jpg 1x,
+                      ./images/portfolio/mob/img-6-mob-2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+
+                    <source
+                      srcset="
+                      ./images/portfolio/320/img-6-320-1x.jpg 1x,
+                      ./images/portfolio/320/img-6-320-2x.jpg 2x
+                      "
+                      media="(max-width: 479px)"
+                    />
+
+                    <img src="./images/portfolio/desk/img-6-desk-1x.jpg" alt="Технокряк">
+                    
+                  </picture>
                   <p class="gallery-card__hover">
                     Дуже важливо піклуватися про себе, щоб досягти успіху, але в
                     той же час це вимагає багато праці та болю. Якщо говорити
@@ -255,11 +489,42 @@
             <li class="gallery-card">
               <a class="gallery-card__link link" href="#" target="_self">
                 <div class="gallery-card__thumb">
-                  <img
-                    src="./images/portfolio/img-8.jpeg"
-                    alt="Лого LAB"
-                    width="370"
-                  >
+                  <picture>
+                    <source
+                      srcset="
+                      ./images/portfolio/desk/img-7-desk-1x.jpg 1x,
+                      ./images/portfolio/desk/img-7-desk-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="
+                      ./images/portfolio/tab/img-7-tab-1x.jpg 1x,
+                      ./images/portfolio/tab/img-7-tab-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                      ./images/portfolio/mob/img-7-mob-1x.jpg 1x,
+                      ./images/portfolio/mob/img-7-mob-2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+
+                    <source
+                      srcset="
+                      ./images/portfolio/320/img-7-320-1x.jpg 1x,
+                      ./images/portfolio/320/img-7-320-2x.jpg 2x
+                      "
+                      media="(max-width: 479px)"
+                    />
+
+                    <img src="./images/portfolio/desk/img-7-desk-1x.jpg" alt="Технокряк">
+                    
+                  </picture>
                   <p class="gallery-card__hover">
                     Дуже важливо піклуватися про себе, щоб досягти успіху, але в
                     той же час це вимагає багато праці та болю. Якщо говорити
@@ -277,11 +542,42 @@
             <li class="gallery-card">
               <a class="gallery-card__link link" href="#" target="_self">
                 <div class="gallery-card__thumb">
-                  <img
-                    src="./images/portfolio/img-9.jpeg"
-                    alt="Екран ноутбуку з відкритим сайтом"
-                    width="370"
-                  >
+                  <picture>
+                    <source
+                      srcset="
+                      ./images/portfolio/desk/img-8-desk-1x.jpg 1x,
+                      ./images/portfolio/desk/img-8-desk-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="
+                      ./images/portfolio/tab/img-8-tab-1x.jpg 1x,
+                      ./images/portfolio/tab/img-8-tab-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                      ./images/portfolio/mob/img-8-mob-1x.jpg 1x,
+                      ./images/portfolio/mob/img-8-mob-2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+
+                    <source
+                      srcset="
+                      ./images/portfolio/320/img-8-320-1x.jpg 1x,
+                      ./images/portfolio/320/img-8-320-2x.jpg 2x
+                      "
+                      media="(max-width: 479px)"
+                    />
+
+                    <img src="./images/portfolio/desk/img-8-desk-1x.jpg" alt="Технокряк">
+                    
+                  </picture>
                   <p class="gallery-card__hover">
                     Дуже важливо піклуватися про себе, щоб досягти успіху, але в
                     той же час це вимагає багато праці та болю. Якщо говорити
@@ -305,17 +601,13 @@
       <div class="footer-container">
         <ul class="footer-list">
           <li class="footer-list__item">
-            <a
-              href="./index.html"
-              target="_self"
-              class="logo logo__footer"
-            >
+            <a href="./index.html" target="_self" class="logo logo__footer">
               Web<span class="logo__footer--white"> Studio </span>
             </a>
 
             <address>
               <ul class="footer-contacts">
-                <li>
+                <li class="footer-contacts__item">
                   <a
                     class="footer-contacts__postaddress"
                     href="http://surl.li/cuoxe"
@@ -325,7 +617,7 @@
                     м. Київ, пр-т Лесі Українки, 26
                   </a>
                 </li>
-                <li>
+                <li class="footer-contacts__item">
                   <a
                     class="footer-contacts__mail"
                     href="mailto:info@devstudio.com"
@@ -333,7 +625,7 @@
                     info@devstudio.com
                   </a>
                 </li>
-                <li class="">
+                <li class="footer-contacts__item">
                   <a class="footer-contacts__tel link" href="tel:+380961111111">
                     +38 096 111 11 11
                   </a>
@@ -345,66 +637,64 @@
           <li class="footer-list__item">
             <h4 class="footer-title">Приєднуйтесь</h4>
             <ul class="social-icons">
-                  <li class="social-icons__item">
-                    <a
-                      class="social-icons__link social-icons__link--grey"
-                      href="#"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <svg class="social-icons__icon" width="20" height="20">
-                        <use
-                          href="./images/svg-icon/symbol-defs.svg#instagram"
-                        ></use>
-                      </svg>
-                    </a>
-                  </li>
+              <li class="social-icons__item">
+                <a
+                  class="social-icons__link social-icons__link--grey"
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <svg class="social-icons__icon" width="20" height="20">
+                    <use
+                      href="./images/svg-icon/symbol-defs.svg#instagram"
+                    ></use>
+                  </svg>
+                </a>
+              </li>
 
-                  <li class="social-icons__item">
-                    <a
-                      class="social-icons__link social-icons__link--grey"
-                      href="#"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <svg class="social-icons__icon" width="20" height="20">
-                        <use
-                          href="./images/svg-icon/symbol-defs.svg#twitter"
-                        ></use>
-                      </svg>
-                    </a>
-                  </li>
+              <li class="social-icons__item">
+                <a
+                  class="social-icons__link social-icons__link--grey"
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <svg class="social-icons__icon" width="20" height="20">
+                    <use href="./images/svg-icon/symbol-defs.svg#twitter"></use>
+                  </svg>
+                </a>
+              </li>
 
-                  <li class="social-icons__item">
-                    <a
-                      class="social-icons__link social-icons__link--grey"
-                      href="#"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <svg class="social-icons__icon" width="20" height="20">
-                        <use
-                          href="./images/svg-icon/symbol-defs.svg#facebook"
-                        ></use>
-                      </svg>
-                    </a>
-                  </li>
+              <li class="social-icons__item">
+                <a
+                  class="social-icons__link social-icons__link--grey"
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <svg class="social-icons__icon" width="20" height="20">
+                    <use
+                      href="./images/svg-icon/symbol-defs.svg#facebook"
+                    ></use>
+                  </svg>
+                </a>
+              </li>
 
-                  <li class="social-icons__item">
-                    <a
-                      class="social-icons__link social-icons__link--grey"
-                      href="#"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <svg class="social-icons__icon" width="20" height="20">
-                        <use
-                          href="./images/svg-icon/symbol-defs.svg#linkedin"
-                        ></use>
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
+              <li class="social-icons__item">
+                <a
+                  class="social-icons__link social-icons__link--grey"
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <svg class="social-icons__icon" width="20" height="20">
+                    <use
+                      href="./images/svg-icon/symbol-defs.svg#linkedin"
+                    ></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
           </li>
 
           <li class="footer-list__item">

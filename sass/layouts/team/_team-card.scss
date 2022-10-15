@@ -5,22 +5,17 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
 
   &:not(:last-child) {
-    @media screen and (max-width: 767px){
-    margin-bottom: 30px;
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
     }
   }
 
-  @media screen and (min-width: 768px) {
+  @include tablet {
     width: calc((100% - 30px) / 2);
   }
 
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     width: calc((100% - 90px) / 4);
-  }
-
-  &__photo {
-    width: 450px;
-    height: 460px;
   }
 
   &__caption {
@@ -47,7 +42,6 @@
 
 /* social icons */
 
-
 .social-icons__link {
   fill: $iconsColor;
 }
@@ -57,7 +51,6 @@
   fill: $primaryWhiteColor;
   background-color: $accentColor;
 }
-
 
 // .team-card {
 //   flex-basis: calc((100% - 90px) / 4);
@@ -92,7 +85,6 @@
 // }
 
 // /* social icons */
-
 
 // .social-icons__link {
 //   fill: $iconsColor;

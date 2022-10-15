@@ -2,9 +2,8 @@
   display: none;
   padding: 47px 0 94px;
 
-  @media screen and (min-width:1200px) {
+ @include desktop {
     display: block;
-    
   }
 
   &-container {

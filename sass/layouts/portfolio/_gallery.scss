@@ -1,3 +1,16 @@
+.gallery {
+  @extend %section;
+  padding: 60px 0;
+
+  @include desktop {
+    padding: 94px;
+  }
+}
+
+.container {
+@extend %container;
+}
+
 .card-set {
     @extend %list;
   display: flex;

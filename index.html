@@ -36,9 +36,7 @@
 
         <ul class="header-nav">
           <li class="header-nav__item">
-            <a
-              href="./index.html"
-              class="header-nav__link header-nav__current"
+            <a href="./index.html" class="header-nav__link header-nav__current"
               >Студія</a
             >
           </li>
@@ -53,19 +51,17 @@
         <ul class="header-contacts">
           <li class="header-contacts__item">
             <a class="header-contacts__link" href="mailto:info@devstudio.com">
-              <svg class="header-contacts__icon" width="16px" height="12px">
+              <svg class="header-contacts__icon header-contacts__icon--envelop">
                 <use href="./images/svg-icon/symbol-defs.svg#envelope"></use>
               </svg>
               info@devstudio.com
             </a>
           </li>
-        
+
           <li class="header-contacts__item">
             <a class="header-contacts__link" href="tel:+380961111111">
-              <svg class="header-contacts__icon" width="10px" height="16px">
-                <use
-                  href="./images/svg-icon/symbol-defs.svg#smartphone"
-                ></use>
+              <svg class="header-contacts__icon header-contacts__icon--smartphone">
+                <use href="./images/svg-icon/symbol-defs.svg#smartphone"></use>
               </svg>
               +38 096 111 11 11</a
             >
@@ -155,16 +151,18 @@
                   Погоджуюся з розсилкою та приймаю
                   <a href="#" class="agreement__link">Умови договору</a>
                 </span>
-  
+
                 <span class="agreement agreement--on">
                   <svg width="16" height="15" class="check-icon">
                     <use href="./images/svg-icon/symbol-defs.svg#checkon"></use>
                   </svg>
                 </span>
-  
+
                 <span class="agreement agreement--off">
                   <svg width="16" height="15" class="checkbox-icon">
-                    <use href="./images/svg-icon/symbol-defs.svg#checkofff"></use>
+                    <use
+                      href="./images/svg-icon/symbol-defs.svg#checkofff"
+                    ></use>
                   </svg>
                 </span>
               </label>
@@ -247,27 +245,47 @@
           <h2 class="section-title">Чим ми займаємось</h2>
           <ul class="specialization-list">
             <li class="specialization-list__item">
-              <img
-                class="specialization-list__pict"
-                src="./images/specialization/img1.jpeg"
-                alt="Хтось працює на компі"
-              />
+              <picture>
+                <source
+                  srcset="
+              ./images/specialization/spec-1-1x.jpg 1x,
+              ./images/specialization/spec-1-2x.jpg 2x"
+                />
+                <img
+                  src="./images/specialization/spec-1-1x.jpg"
+                  alt="Хтось працює на компі"
+                />
+              </picture>
               <p class="specialization-list__overlay">Десктопні додатки</p>
             </li>
 
             <li class="specialization-list__item">
-              <img
-                src="./images/specialization/img2.jpeg"
-                alt="Хтось шось робить пультом"
-              />
+              <picture>
+                <source
+                  srcset="
+                  ./images/specialization/spec-2-1x.jpg 1x,
+                  ./images/specialization/spec-2-2x.jpg 2x"
+                />
+                <img
+                  src="./images/specialization/spec-2-1x.jpg"
+                  alt="Хтось щось робить пультом}"
+                />
+              </picture>
               <p class="specialization-list__overlay">Мобільні додатки</p>
             </li>
 
             <li class="specialization-list__item">
-              <img
-                src="./images/specialization/img3.jpeg"
-                alt="Хтось підбирає колір"
-              />
+              <picture>
+                <source
+                  srcset="
+                  ./images/specialization/spec-3-1x.jpg 1x,
+                  ./images/specialization/spec-3-2x.jpg 2x"
+                />
+                <img
+                  src="./images/specialization/spec-3-1x.jpg"
+                  alt="Хтось підбирає колір"
+                />
+              </picture>
               <p class="specialization-list__overlay">Дизайнерські рішення</p>
             </li>
           </ul>
@@ -281,7 +299,44 @@
           <h2 class="section-title">Наша команда</h2>
           <ul class="team-list">
             <li class="team-card">
-              <img class="team-card__photo" src="#" alt="Ігорь Дем'яненко." />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/desk/ihor-desk-1x.jpg 1x,
+                    ./images/team/desk/ihor-desk-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+
+                <source
+                  srcset="
+                    ./images/team/tab/ihor-tab-1x.jpg 1x,
+                    ./images/team/tab/ihor-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+
+                <source
+                  srcset="
+                    ./images/team/mob/ihor-mob-1x.jpg 1x,
+                    ./images/team/mob/ihor-mob-2x.jpg 2x
+                  "
+                  media="(min-width: 480px)"
+                />
+
+                <source
+                  srcset="
+                    ./images/team/320/ihor-320-1x.jpg 1x,
+                    ./images/team/320/ihor-320-2x.jpg 2x
+                  "
+                  media="(max-width: 479px)"
+                />
+
+                <img
+                  src="./images/team/desk/ihor-desk-1x.jpg"
+                  alt="Ігор Дем'яненко"
+                />
+              </picture>
               <div class="team-card__caption">
                 <h3 class="team-card__title">Ігор Дем'яненко</h3>
                 <p class="team-card__position">Product Designer</p>
@@ -349,9 +404,45 @@
                 </ul>
               </div>
             </li>
-
             <li class="team-card">
-              <img class="team-card__photo" src="#" alt="Ольга Рєпіна" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/desk/olha-desk-1x.jpg 1x,
+                    ./images/team/desk/olha-desk-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+
+                <source
+                  srcset="
+                    ./images/team/tab/olha-tab-1x.jpg 1x,
+                    ./images/team/tab/olha-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+
+                <source
+                  srcset="
+                    ./images/team/mob/olha-mob-1x.jpg 1x,
+                    ./images/team/mob/olha-mob-2x.jpg 2x
+                  "
+                  media="(min-width: 480px)"
+                />
+
+                <source
+                  srcset="
+                    ./images/team/320/olha-320-1x.jpg 1x,
+                    ./images/team/320/olha-320-2x.jpg 2x
+                  "
+                  media="(max-width: 479px)"
+                />
+
+                <img
+                  src="./images/team/desk/olha-desk-1x.jpg"
+                  alt="Ігор Дем'яненко"
+                />
+              </picture>
               <div class="team-card__caption">
                 <h3 class="team-card__title">Ольга Рєпіна</h3>
                 <p class="team-card__position">Frontend Developer</p>
@@ -419,12 +510,48 @@
                 </ul>
               </div>
             </li>
-
             <li class="team-card">
-              <img class="team-card__photo" src="#" alt="Микола Тарасов" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/desk/mykola-desk-1x.jpg 1x,
+                    ./images/team/desk/mykola-desk-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+
+                <source
+                  srcset="
+                    ./images/team/tab/mykola-tab-1x.jpg 1x,
+                    ./images/team/tab/mykola-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+
+                <source
+                  srcset="
+                    ./images/team/mob/mykola-mob-1x.jpg 1x,
+                    ./images/team/mob/mykola-mob-2x.jpg 2x
+                  "
+                  media="(min-width: 480px)"
+                />
+
+                <source
+                  srcset="
+                    ./images/team/320/mykola-320-1x.jpg 1x,
+                    ./images/team/320/mykola-320-2x.jpg 2x
+                  "
+                  media="(max-width: 479px)"
+                />
+
+                <img
+                  src="./images/team/desk/mykola-desk-1x.jpg"
+                  alt="Ігор Дем'яненко"
+                />
+              </picture>
               <div class="team-card__caption">
-                <h3 class="team-card__title">Ігор Дем'яненко</h3>
-                <p class="team-card__position">Product Designer</p>
+                <h3 class="team-card__title">Микола Тарасов</h3>
+                <p class="team-card__position">Marketing</p>
 
                 <ul class="social-icons">
                   <li class="social-icons__item">
@@ -489,10 +616,47 @@
                 </ul>
               </div>
             </li>
-
             <li class="team-card">
-              <img class="team-card__photo" src="#" alt="Михайло Єрмаков" />
+              <picture>
+                <source
+                class="team-card__photo"
+                  srcset="
+                    ./images/team/desk/mike-desk-1x.jpg 1x,
+                    ./images/team/desk/mike-desk-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
 
+                <source
+                  srcset="
+                    ./images/team/tab/mike-tab-1x.jpg 1x,
+                    ./images/team/tab/mike-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+
+                <source
+                  srcset="
+                    ./images/team/mob/mike-mob-1x.jpg 1x,
+                    ./images/team/mob/mike-mob-2x.jpg 2x
+                  "
+                  media="(min-width: 480px)"
+                />
+
+                <source
+                  srcset="
+                    ./images/team/320/mike-320-1x.jpg 1x,
+                    ./images/team/320/mike-320-2x.jpg 2x
+                  "
+                  media="(max-width: 479px)"
+                
+                />
+
+                <img
+                  src="./images/team/desk/mike-desk-1x.jpg"
+                  alt="Ігор Дем'яненко"
+                />
+              </picture>
               <div class="team-card__caption">
                 <h3 class="team-card__title">Михайло Єрмаков</h3>
                 <p class="team-card__position">UI Designer</p>
@@ -701,8 +865,8 @@
                   >
                     info@devstudio.com
                   </a>
-                </li class="footer-contacts__item">
-                <li class="">
+                </li>
+                <li class="footer-contacts__item">
                   <a class="footer-contacts__tel link" href="tel:+380961111111">
                     +38 096 111 11 11
                   </a>
