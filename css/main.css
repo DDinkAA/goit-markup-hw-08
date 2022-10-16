@@ -539,13 +539,6 @@ p {
   }
 }
 
-.picture {
-  width: 500px;
-  height: 300px;
-  border: 1px solid red;
-  background-image: url(../../images/hero/Hero-img-desk-min-1x.jpg);
-}
-
 .backdrop {
   position: fixed;
   top: 0;
